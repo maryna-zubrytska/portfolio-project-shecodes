@@ -1,3 +1,27 @@
+function showAllProjects(event) {
+    event.preventDefault();
+
+    let projectCardHTML = `
+    <div class="col-md-4 project-card">
+    <a href="https://kaleidoscopic-queijadas-82d56a.netlify.app/" target="_blank">
+        <img class="img-fluid project-pic mob" src="/img/weather-app-desktop.png" alt="">
+    </a>
+    </div>
+    <div class="col-md-4 project-card">
+        <a href="https://friendly-dasik-0c9df0.netlify.app/" target="_blank">
+            <img class="img-fluid project-pic mob" src="/img/croissant-app-desktop.png" alt="">
+        </a>
+    </div>
+    <div class="col-md-4 project-card">
+        <a href="https://shimmering-clafoutis-510917.netlify.app/" target="_blank">
+            <img class="img-fluid project-pic mob" src="/img/sPortfolio-app-desktop.png" alt="">
+        </a>
+    </div>
+    `;
+
+    document.querySelector("#row-for-project-screens").innerHTML = projectCardHTML;
+}
+
 function showWeatherProject(event) {
     event.preventDefault();
 
@@ -66,3 +90,6 @@ projectCroissantButton.addEventListener("click", showCroissantProject);
 
 let sPortfolioButton = document.querySelector("#button-projects-sPortfolio");
 sPortfolioButton.addEventListener("click", showSPortfolio);
+
+let allProjectsButton = document.querySelector("#button-projects-all");
+allProjectsButton.addEventListener("click", showAllProjects);
